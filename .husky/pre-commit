@@ -1,0 +1,4 @@
+#!/bin/sh
+
+MAIN_DIR=./node_modules/@krauters/utils/scripts/pre-commit
+. $MAIN_DIR/index.sh
