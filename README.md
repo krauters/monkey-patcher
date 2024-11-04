@@ -1,4 +1,24 @@
-# Monkey Patcher
+<div align="center">
+
+![Code Size](https://img.shields.io/github/languages/code-size/krauters/monkey-patcher)
+![Commits per Month](https://img.shields.io/github/commit-activity/m/krauters/monkey-patcher)
+![Contributors](https://img.shields.io/github/contributors/krauters/monkey-patcher)
+![Forks](https://img.shields.io/github/forks/krauters/monkey-patcher)
+![GitHub Stars](https://img.shields.io/github/stars/krauters/monkey-patcher)
+![Install Size](https://img.shields.io/npm/npm/dw/@krauters%2Fmonkey-patcher)
+![GitHub Issues](https://img.shields.io/github/issues/krauters/monkey-patcher)
+![Last Commit](https://img.shields.io/github/last-commit/krauters/monkey-patcher)
+![License](https://img.shields.io/github/license/krauters/monkey-patcher)
+<a href="https://www.linkedin.com/in/coltenkrauter" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+[![npm version](https://img.shields.io/npm/v/@krauters%2Fmonkey-patcher.svg?style=flat-square)](https://www.npmjs.org/package/@krauters/monkey-patcher)
+![Open PRs](https://img.shields.io/github/issues-pr/krauters/monkey-patcher)
+![Repo Size](https://img.shields.io/github/repo-size/krauters/monkey-patcher)
+![Version](https://img.shields.io/github/v/release/krauters/monkey-patcher)
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=krauters/monkey-patcher)
+
+</div>
+
+# @krauters/monkey-patcher
 
 **MonkeyPatcher** is a powerful TypeScript utility designed to help developers extend class prototypes by adding new methods under a specified namespace. This approach enhances the flexibility and extensibility of codebases without altering the original class implementations. By encapsulating additional functionalities within a clear namespace, **MonkeyPatcher** promotes organized and maintainable code patching.
 
@@ -31,7 +51,7 @@ const stringMethods = {
 // 2. Extend the String interface to include the new namespace
 declare global {
 	interface String {
-		utils: {
+		monkey-patcher: {
 			reverse(): string
 			capitalize(): string
 		}
@@ -39,7 +59,7 @@ declare global {
 }
 
 // 3. Create a MonkeyPatcher instance with the desired namespace
-const stringPatcher = new MonkeyPatcher(String.prototype, 'utils')
+const stringPatcher = new MonkeyPatcher(String.prototype, 'monkey-patcher')
 
 // 4. Patch the String class with the new methods
 stringPatcher.patch(stringMethods)
@@ -50,9 +70,9 @@ const str = new String('hello world')
 // Access existing method
 console.log(str.toUpperCase()) // Output: HELLO WORLD
 
-// Use patched methods under the 'utils' namespace
-console.log(str.utils.reverse()) // Output: dlrow olleh
-console.log(str.utils.capitalize()) // Output: Hello world
+// Use patched methods under the 'monkey-patcher' namespace
+console.log(str.monkey-patcher.reverse()) // Output: dlrow olleh
+console.log(str.monkey-patcher.capitalize()) // Output: Hello world
 ```
 
 ## Husky
